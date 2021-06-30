@@ -2,7 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavBarComponent } from './layout/nav-bar/nav-bar.component';
 import { FooterComponent } from './layout/footer/footer.component';
-
+import { NgbNavModule, NgbCollapse, NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
+import { RouterModule } from '@angular/router';
+import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
+import {fas} from '@fortawesome/free-solid-svg-icons';
 
 
 @NgModule({
@@ -11,11 +14,19 @@ import { FooterComponent } from './layout/footer/footer.component';
     FooterComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+   NgbNavModule,
+   NgbCollapseModule,
+   RouterModule,
+   FontAwesomeModule
   ],
   exports: [
-        NavBarComponent,
+    NavBarComponent,
     FooterComponent
   ]
 })
-export class CoreModule { }
+export class CoreModule {
+  constructor(library: FaIconLibrary) {
+    library.addIconPacks(fas);
+  }
+ }

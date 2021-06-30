@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'aja-nav-bar',
@@ -7,7 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavBarComponent implements OnInit {
 
-  constructor() { }
+  public isCollapsed: any = false;
+  links = [
+    {title: 'Home', fragment: 'intro'},
+    {title: 'Services', fragment: 'services'},
+    {title: 'Testimonials', fragment: 'companies'},
+    {title: 'Faq', fragment: 'faq'},
+    {title: 'Get started', fragment: 'started'},
+    {title: 'Portfolio', fragment: 'portfolio'},
+    {title: 'Contact', fragment: 'contact'}
+  ];
+  constructor(public route: ActivatedRoute) { }
 
   ngOnInit(): void {
   }
