@@ -8,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class NavBarComponent implements OnInit {
 
-  public isCollapsed: any = false;
+  public isMenuCollapsed = true;
   links = [
     {title: 'Home', fragment: 'intro'},
     {title: 'Services', fragment: 'services'},

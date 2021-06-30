@@ -4,17 +4,16 @@
     <a href="#" class="navbar-brand">
       <img src="assets/images/logo.png" alt="">
     </a>
-    <button class="navbar-toggler" type="button" (click)="collapse.toggle()"
-      [attr.aria-expanded]="!isCollapsed"
+    <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed"
       aria-controls="navbarNav"  aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse justify-content-end" #collapse="ngCollapse" [(ngCollapse)]="isCollapsed">
+    <div class="collapse navbar-collapse justify-content-end" [ngbCollapse]="isMenuCollapsed">
       <!-- your navs bound to current route fragments -->
       <ul ngbNav [activeId]="route.fragment | async" class="navbar-nav">
-        <li class="nav-item" [ngbNavItem]="link.fragment" *ngFor="let link of links">
-          <a ngbNavLink [routerLink]="link.fragment" class="nav-link">{{ link.title }}</a>
+        <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" [ngbNavItem]="link.fragment" *ngFor="let link of links">
+          <a ngbNavLink [routerLink]="link.fragment" >{{ link.title }}</a>
         </li>
       </ul>
 
