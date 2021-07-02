@@ -1,1 +1,51 @@
-<p>testimonials works!</p>
+<section id="testimonials" class="testimonials">
+    <div class="container">
+        <div id="wave">
+
+        </div>
+        <div class="row text-center text-white">
+            <h1 class="display-3 fw-bold">Testimonials</h1>
+            <hr style="width: 100px; height: 3px;" class="mx-auto">
+            <p class="lead pt-2">What our clients are saying</p>
+        </div>
+    </div>
+
+    <ngb-carousel #carousel [showNavigationArrows]="false" [showNavigationIndicators]="false">
+        <ng-template  *ngFor="let testimonial of testimonials" ngbSlide>
+        <!-- Testimonials card -->
+                    <div class="testimonials__card">
+                        <span class="lh-lg">
+                            <fa-icon [icon]="['fas','quote-left']">
+                            </fa-icon>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi tenetur, voluptatem
+                            quidem ipsam aut obcaecati consequatur, officia velit tempora sint deleniti?
+                            <fa-icon [icon]="['fas','quote-right']"></fa-icon>
+                            <div class="ratings p-3">
+                                <fa-icon [icon]="['fas','star']" *ngFor="let r of testimonial.ratings">
+                                </fa-icon>
+                            </div>
+                        </span>
+                    </div>
+                       <!-- Client picture -->
+                       <div class="testimonials__picture">
+                        <img [src]="testimonial.img" alt="" class="rounded-circle img-fluid">
+                    </div>
+
+                    <!-- Client name & role -->
+                    <div class="testimonials__name">
+                        <h3>{{testimonial.name}}</h3>
+                        <p class="fw-light">{{testimonial.role}}</p>
+                    </div>
+        </ng-template>
+    </ngb-carousel>
+    <div class="text-center">
+        <button class="btn btn-outline-light" type="button" (click)="next()">
+            <fa-icon [icon]="['fas','long-arrow-alt-left']">
+            </fa-icon>
+        </button>
+        <button class="btn btn-outline-light" type="button" (click)="prev()">
+            <fa-icon [icon]="['fas','long-arrow-alt-right']">
+            </fa-icon>
+        </button>
+    </div>
+</section>

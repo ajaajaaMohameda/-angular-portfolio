@@ -1,0 +1,65 @@
+@use '../../../theme/components/typography' as *;
+@use '../../../theme/components/mixins' as *;
+@use '../../../theme/custom' as *;
+
+#wave {
+    height: 10rem;
+}
+
+.testimonials {
+    position: relative;
+    padding: 1rem;
+    @include gradient;
+
+
+    &__card {
+        background-color: rgba($color: $white, $alpha: 0.8);
+        padding: 2rem 1.25rem;
+        border-radius: 0.625rem;
+        height: auto;
+        text-align: center;
+
+        fa-icon {
+            font-size: 1.5rem;
+            color: rgba($color: $primary, $alpha: 0.7);
+        }
+
+        .ratings {
+            fa-icon {
+                font-size: 1rem;
+                color: rgba($color: $primary, $alpha: 0.7);
+            }
+        }
+    }
+
+    &__picture {
+        width: 6rem;
+        height: 6rem;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+
+        img {
+            border: 0.325 solid rgba($color: $primary, $alpha: 0.7);
+        }
+    }
+
+    &__name {
+        padding-top: 4rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        font-weight: 500;
+        color: $white;
+
+        h3 {
+            padding-top: 0.8rem;
+            text-transform: capitalize;
+        }
+
+        p {
+            padding-bottom: 2rem;
+            text-transform: capitalize;
+        }
+
+    }
+}
