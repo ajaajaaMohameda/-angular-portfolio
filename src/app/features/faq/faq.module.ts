@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { FaqRoutingModule } from './faq-routing.module';
 import { FaqComponent } from './faq.component';
+import { SharedModule } from 'src/app/shared/shared.module';
+import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -11,7 +13,9 @@ import { FaqComponent } from './faq.component';
   ],
   imports: [
     CommonModule,
-    FaqRoutingModule
+    FaqRoutingModule,
+    SharedModule,
+    NgbAccordionModule
   ]
 })
 export class FaqModule { }

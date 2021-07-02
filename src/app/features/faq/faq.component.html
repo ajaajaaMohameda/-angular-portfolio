@@ -1,1 +1,32 @@
-<p>faq works!</p>
+<section id="faq" class="faq">
+<div class="container">
+    <div id="wave"></div>
+    <div class="row text-center">
+        <h1 class="display-3 fw-bold text-uppercase">
+            faq
+        </h1>
+        <div class="heading-line"></div>
+        <p class="lead">frequently asked quesions, get knowledge before hand</p>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <ngb-accordion  class="shadow mb-3" #acc="ngbAccordion" activeIds="ngb-panel-0" *ngFor="let f of faq" c>
+                <ngb-panel title="Simple">
+                    <ng-template ngbPanelHeader let-opened="opened">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <button ngbPanelToggle class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                {{f.question}}
+                            </button>
+                        </div>
+                    </ng-template>
+                    <ng-template ngbPanelContent>
+                        {{f.answer}}
+                    </ng-template>
+                </ngb-panel>
+            </ngb-accordion>
+        </div>
+    </div>
+</div>
+</section>

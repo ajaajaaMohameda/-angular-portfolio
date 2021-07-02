@@ -1,0 +1,14 @@
+@use  '../../../theme/custom' as *;
+
+#wave {
+    height: 10rem;
+}
+:host ::ng-deep {
+    .card {
+        margin-bottom: 1rem;
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+    }
+    .card-header {
+        padding: 0%;
+    }
+}
