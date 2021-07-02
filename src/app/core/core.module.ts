@@ -6,6 +6,7 @@ import { NgbNavModule, NgbCollapse, NgbCollapseModule } from '@ng-bootstrap/ng-b
 import { RouterModule } from '@angular/router';
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import {fas} from '@fortawesome/free-solid-svg-icons';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -18,7 +19,7 @@ import {fas} from '@fortawesome/free-solid-svg-icons';
    NgbNavModule,
    NgbCollapseModule,
    RouterModule,
-   FontAwesomeModule
+   SharedModule
   ],
   exports: [
     NavBarComponent,
@@ -26,7 +27,5 @@ import {fas} from '@fortawesome/free-solid-svg-icons';
   ]
 })
 export class CoreModule {
-  constructor(library: FaIconLibrary) {
-    library.addIconPacks(fas);
-  }
+
  }

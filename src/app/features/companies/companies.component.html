@@ -1,1 +1,21 @@
-<p>companies works!</p>
+<section id="companies" class="companies">
+    <div class="container">
+        <div id="wave">
+
+        </div>
+        <div class="row text-center">
+            <h4 class="fw-bold lead mb-3">Trusted by companies like</h4>
+        </div>
+        <div class="heading-line mb-5"></div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2 col-lg-2" *ngFor="let logo of logos; let index = index">
+                <div class="companies--logo-box shadow-sm">
+                    <img [src]="logo" alt="logo{{index + 1 }}" title="logo {{index + 1 }}" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

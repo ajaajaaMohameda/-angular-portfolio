@@ -1,0 +1,41 @@
+@use '../../../theme/custom' as *;
+@use '../../../theme/components/mixins' as *;
+@use '../../../theme/components/animations' as *;
+.intro-section {
+    @include gradient;
+    height: 100%;
+    width: 100%;
+    padding: 10rem 0 0 0;
+}
+
+.intros {
+    .video-box {
+        position: relative;
+        a {
+            span {
+                fa-icon {
+                    font-size: 6rem;
+                    color: $secondary;
+                }
+            }
+        }
+    }
+}
+
+.border-animation {
+    position: absolute;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    border: 0.55rem solid $white;
+    top: 0;
+    left: 0;
+    animation: pulse-border 1s linear infinite;
+
+    &--border-1 {
+        animation-delay: 1s;
+    }
+    &--border-2 {
+        animation-delay: 1.2s;
+    }
+}

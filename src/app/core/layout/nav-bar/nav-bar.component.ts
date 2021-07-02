@@ -12,7 +12,8 @@ export class NavBarComponent implements OnInit {
   links = [
     {title: 'Home', fragment: 'intro'},
     {title: 'Services', fragment: 'services'},
-    {title: 'Testimonials', fragment: 'companies'},
+    {title: 'Companies', fragment: 'companies'},
+    {title: 'Testimonials', fragment: 'testimonials'},
     {title: 'Faq', fragment: 'faq'},
     {title: 'Get started', fragment: 'started'},
     {title: 'Portfolio', fragment: 'portfolio'},

@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { IntroRoutingModule } from './intro-routing.module';
 import { IntroComponent } from './intro.component';
-
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -11,7 +11,11 @@ import { IntroComponent } from './intro.component';
   ],
   imports: [
     CommonModule,
-    IntroRoutingModule
+    IntroRoutingModule,
+    SharedModule
+  ],
+  providers: [
+    
   ]
 })
 export class IntroModule { }
