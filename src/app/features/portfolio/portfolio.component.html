@@ -1,1 +1,35 @@
-<p>portfolio works!</p>
+<section id="portfolio" class="portfolio">
+    <div class="container">
+        <div id="wave"></div>
+        <div class="row text-center mt-5">
+            <h1 class="display-3 fw-bold text-capitalize">Latest work</h1>
+            <div class="heading-line"></div>
+            <p class="lead">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit minima asperiores aliquid distinctio amet modi deleniti porro aut provident, minus doloremque, rem necessitatibus harum quasi quam nihil facere voluptatum quos!</p>
+        </div>
+
+        <!-- Filter buttons-->
+        <div class="row text-center mt-5 mb-4">
+            <div class="col-md-12">
+                <button type="button" class="btn btn-outline-primary">All</button>
+                <button type="button" class="btn btn-outline-primary">website</button>
+                <button type="button" class="btn btn-outline-primary">Design</button>
+                <button type="button" class="btn btn-outline-primary">Mockup</button>
+            </div>
+        </div>
+
+        <!-- START THE PORTFOLIO ITEMS -->
+        <div class="row">
+            <div class="col-lg-4 col-md-6" *ngFor="let img of imgs">
+                <div class="portfolio-box shadow">
+                    <img [src]="img.src" alt="">
+                    <div class="portfolio-info">
+                        <div class="caption">
+                            <h4>{{img.name}}</h4>
+                            <p>{{img.description}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
