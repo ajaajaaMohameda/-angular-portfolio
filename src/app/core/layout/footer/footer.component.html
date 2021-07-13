@@ -1,1 +1,93 @@
-<p>footer works!</p>
+<footer class="footer">
+    <!-- START THE contact information-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-lg-4 contact-box pt-1 d-md-block d-lg-flex d-flex" *ngFor="let item of items">
+                <div class="contact-box__icon" [innerHTML]="item.svg">
+                </div>
+                <div class="contact-box__info">
+                    <a href="" class="contact-box__info--title">{{item.title}}</a>
+                    <p class="contact-box__info--subtitle">{{item.subTitle}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Start the social media content -->
+
+    <div class="footer-sm" style="background-color: #212121;">
+        <div class="container">
+            <div class="row py-4 text-center text-white">
+                <div class="col-lg-5 col-md-6 mb-4 mb-md-0">
+                    Connect with us on social media
+                </div>
+
+                <div class="col-lg-7 col-md-6">
+                    <a href="#"><fa-icon [icon]="['fab','facebook']"></fa-icon></a>
+                    <a href="#"><fa-icon [icon]="['fab','twitter']"></fa-icon></a>
+                    <a href="#"><fa-icon [icon]="['fab','github']"></fa-icon></a>
+                    <a href="#"><fa-icon [icon]="['fab','linkedin']"></fa-icon></a>
+                    <a href="#"><fa-icon [icon]="['fab','instagram']"></fa-icon></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--START THE CONTENT FOR COMPANY INFO -->
+    <div class="container mt-5">
+        <div class="row text-white justify-content-center mt-3 pb-3">
+            <div class="col-12 col-sm-6 col-lg-6">
+                <h5 class="text-capitalize fw-bold">company name</h5>
+                <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;"> 
+                <p class="lh-lg">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate expedita, mollitia rem veritatis repudiandae iusto dolorum obcaecati saepe exercitationem placeat magni molestias assumenda quasi labore excepturi, fugit repellendus a error!
+                </p>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-2 mb-4 mx-auto">
+                <h5 class="text-capitalize fw-bold">Products</h5>
+                <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;"> 
+                <ul class="list-inline company-list">
+                    <li *ngFor="let item of products"><a href="#">{{item.text}}</a></li>
+                </ul>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-2 mb-4 mx-auto">
+                <h5 class="text-capitalize fw-bold">useful links</h5>
+                <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;"> 
+                <ul class="list-inline company-list">
+                    <li *ngFor="let item of links"><a href="#">{{item.text}}</a></li>
+                </ul>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-2 mb-4 mx-auto">
+                <h5 class="text-capitalize fw-bold">Contact</h5>
+                <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;"> 
+                <ul class="list-inline company-list">
+                    <li *ngFor="let item of contacts"><a href="#">{{item.text}}</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <!--START THE COPYRIGHT INFO -->
+        <div class="footer-bottom pt-5 pb-5">
+            <div class="container">
+                <div class="row text-center text-white">
+                    <div class="col-12">
+                        <div class="footer-bottom__copyright">
+                            &copy; COPYRIGHT 2021 | Created by <a href="#">AJAAJAA Mohamed</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</footer>
+
+<!--BACK TO TOP BUTTON -->
+
+<a href="#" class="shadow btn-primary rounded-circle .back-to-top">
+    <fa-icon [icon]="['fas','chevron-up']"></fa-icon>
+</a>

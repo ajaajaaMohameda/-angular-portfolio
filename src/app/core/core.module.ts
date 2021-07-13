@@ -7,6 +7,8 @@ import { RouterModule } from '@angular/router';
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import {fas} from '@fortawesome/free-solid-svg-icons';
 import { SharedModule } from '../shared/shared.module';
+import { InlineSVGModule } from 'ng-inline-svg';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { SharedModule } from '../shared/shared.module';
    NgbNavModule,
    NgbCollapseModule,
    RouterModule,
-   SharedModule
+   SharedModule,
+   InlineSVGModule,
+   HttpClientModule
   ],
   exports: [
     NavBarComponent,
