@@ -4,6 +4,11 @@ $purple-light: #bb6ef5;
 $pink: #bb6ef5;
 $footer: #151414;
 
+// other theme colors
+$green: #008000;
+$forestgreen: #228B22;
+$mediumseagreen: #3CB371;
+$purple-light: $forestgreen;
 // White and gray colors
 $white:    #fff ;
 $gray-100: #f8f9fa ;
@@ -19,8 +24,12 @@ $black:    #000 ;
 
 // Default colors
 
-$primary: $purple-dark;
+/* $primary: $purple-dark;
 $secondary: $pink;
+ */
+
+ $primary: $green;
+ $secondary: $mediumseagreen;
 
 // Accordion overrides
 $accordion-icon-color:                    $primary;
