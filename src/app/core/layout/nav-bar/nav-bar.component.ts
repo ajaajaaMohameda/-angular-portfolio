@@ -16,8 +16,7 @@ export class NavBarComponent implements OnInit {
     {title: 'Testimonials', fragment: 'testimonials'},
     {title: 'Faq', fragment: 'faq'},
     {title: 'Get started', fragment: 'started'},
-    {title: 'Portfolio', fragment: 'portfolio'},
-    {title: 'Contact', fragment: 'contact'}
+    {title: 'Portfolio', fragment: 'portfolio'}
   ];
   constructor(public route: ActivatedRoute) { }
 

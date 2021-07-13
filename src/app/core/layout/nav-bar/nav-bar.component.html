@@ -12,7 +12,7 @@
     <div class="collapse navbar-collapse justify-content-end" [ngbCollapse]="isMenuCollapsed">
       <!-- your navs bound to current route fragments -->
       <ul ngbNav [activeId]="route.fragment | async" class="navbar-nav">
-        <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" [ngbNavItem]="link.fragment" *ngFor="let link of links">
+        <li  (click)="isMenuCollapsed = !isMenuCollapsed" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" [ngbNavItem]="link.fragment" *ngFor="let link of links">
           <a ngbNavLink [routerLink]="link.fragment" >{{ link.title }}</a>
         </li>
       </ul>
